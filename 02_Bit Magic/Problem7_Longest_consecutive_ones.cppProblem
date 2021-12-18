@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+    public:
+    int maxConsecutiveOnes(int N)
+    {
+        int count=0;
+        while(N){
+        N=N&(N<<1);
+        count++;
+        }
+        return count;
+    }
+};
+
+
+
+int main() {
+	int t;
+	cin>>t;//testcases
+	while(t--)
+	{
+		int n;
+		cin>>n;//input n
+		Solution obj;
+		//calling maxConsecutiveOnes() function
+		cout<<obj.maxConsecutiveOnes(n)<<endl;
+	}
+	return 0;
+}  
