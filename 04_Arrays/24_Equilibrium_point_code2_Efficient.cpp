@@ -38,3 +38,30 @@ int main() {
 
     
 }
+
+
+
+/*
+
+    int equilibriumPoint(long long a[], int n) {
+    
+        // Your code here
+        int ls=0;
+        int s=0;
+        for(int i=0;i<n;i++){
+            s=s+a[i];
+        }
+        
+        for(int i=0;i<n;i++){
+            s=s-a[i];
+            if(ls==s)
+                return i+1;
+            else{
+                ls=ls+a[i];
+            }
+        }
+        
+        return -1;
+    }
+    
+*/
