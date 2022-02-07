@@ -5,3 +5,4 @@
 3. Recursion
 4. Arrays
 5. Searching
+6. Sorting
