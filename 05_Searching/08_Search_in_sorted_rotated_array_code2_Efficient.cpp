@@ -13,7 +13,7 @@ int search(int arr[], int n, int x)
 
 		if(arr[mid] == x)
 			return mid;
-		if(arr[low] < arr[mid])
+		if(arr[low] < arr[mid])  //left half sorted
 		{
 			if(x >= arr[low] && x < arr[mid])
 				high = mid - 1;
