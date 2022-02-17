@@ -20,7 +20,7 @@ int search(int arr[], int n, int x)
 			else 
 				low = mid + 1;
 		}
-		else
+		else			//right half sorted
 		{
 			if(x > arr[mid] && x <= arr[high])
 				low = mid + 1;
