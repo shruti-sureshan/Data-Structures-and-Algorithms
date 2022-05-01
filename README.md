@@ -1,3 +1,3 @@
 # DSA
 
-This repository includes solved problems of Data structures and Algorithms from various platforms
+This repository includes Data structures and Algorithms problems from various platforms
