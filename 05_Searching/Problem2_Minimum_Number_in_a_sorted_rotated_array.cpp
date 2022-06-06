@@ -1,46 +1,55 @@
 // { Driver Code Starts
-//Initial Template for C
-
-#include <stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
 
 
  // } Driver Code Ends
-//User function Template for C
 
 
-//Function to find the minimum element in sorted and rotated array.
-int minNumber(int arr[], int low, int high)
+class Solution
 {
-    // Your code here
-    int m;
-    while(low<high){
-        m=(low+high)/2;
-        if(arr[m]==arr[high])
-            high--;
-        else if(arr[m]>arr[high])
-            low=m+1;
-        else
-            high=m;
+    public:
+    //Function to find the minimum element in sorted and rotated array.
+    int minNumber(int arr[], int low, int high)
+    {
+        // Your code here
+        if(arr[low]<=arr[high]) //array is not sorted at all
+            return arr[low];
+        
+        while(low<=high){
+            int m=(low+high)/2;
+            if(arr[m]<arr[m-1])
+                return arr[m];
+            else if(arr[m]>arr[m+1])
+                return arr[m+1];
+            else if(arr[low]<=arr[m])
+                low=m+1;
+            else if(arr[m]<=arr[high])
+                high=m-1;
+        }
+        return -1;
+            
+        
     }
-    return arr[high];
-}
+};
 
 // { Driver Code Starts.
+
 
 int main()
 {
 	
 	int t;
-	scanf("%d", &t);
+	cin>>t;
 	while(t--)
 	{
 		int n;
-		scanf("%d", &n);
+		cin>>n;
 		int a[n];
 		for(int i=0;i<n;++i)
-			scanf("%d", &a[i]);	
-	
-		printf("%d\n", minNumber(a,0,n-1) );
+			cin>>a[i];	
+		Solution obj;
+		cout << obj.minNumber(a,0,n-1) << endl;
 	}
 	return 0;
 }  // } Driver Code Ends
