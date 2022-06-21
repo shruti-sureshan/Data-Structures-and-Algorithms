@@ -1,3 +1,6 @@
+//T(n)=Theta(nlogn)
+//Aux space=Theta(n)
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
